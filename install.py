@@ -1,5 +1,6 @@
 import subprocess
 import getpass
+import shutil
 import os
 
 HOME = subprocess.getoutput("echo $HOME")
@@ -19,9 +20,7 @@ PATHS = [
 
 def copy_file(inputpath, outputpath):
     print(f"'copying {inputpath}' --> '{outputpath}'")
-    with open(outputpath, "wb+") as outfile:
-        with open(inputpath, "rb") as infile:
-            outfile.write(infile.readall())
+    shutil.copy(inputpath, outputpath)
 
 def init_directories():
     for directory in PATHS:
