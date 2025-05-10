@@ -3,7 +3,7 @@ ULTRAKILL P-2 Theme for Hyprland
 
 ## Prerequisites
 You have to have archlinux. Why? Too lazy to add support to detect the package manager of choice.
-You have to have `hyprland`, `python3` and `git` installed.
+You have to have `yay`, `python3` and `git` installed.
 The extra packages such as waybar, fastfetch and hyprpaper will get installed by the install script.
 
 ## Installation
