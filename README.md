@@ -10,11 +10,14 @@ The extra packages such as waybar, fastfetch and hyprpaper will get installed by
 First of all, clone this repository by running:
 `git clone https://github.com/GAMINGNOOBdev/uk_p2_hypr_theme`
 
-After that you can change into the cloned repository and run the install script:
+After that you can change into the cloned repository and run the install scripts:
+> Note: You have to run the `install_packages.sh` file first before running the python script!!!
 ```bash
 
 cd uk_p2_hypr_theme
+bash install_packages.sh
 python3 install.py
+cd ..
 
 ```
 

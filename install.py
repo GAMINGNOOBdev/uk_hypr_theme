@@ -17,19 +17,6 @@ PATHS = [
     WAYBAR_PATH,
 ]
 
-packages = [
-    "hyprpaper", "waybar", "fastfetch", "swaync"
-]
-
-def install_packages():
-    getSUDO()
-    packageinstallcmd = "sudo pacman -Sy "
-    for package in packages:
-        packageinstallcmd += package + " "
-    print(f"Running package install command '{packageinstallcmd}'")
-    # just run the command and let the user install it
-    subprocess.Popen(packageinstallcmd, text=True, shell=True)
-
 def copy_file(inputpath, outputpath):
     print(f"'copying {inputpath}' --> '{outputpath}'")
     with open(outputpath, "wb+") as outfile:
@@ -58,7 +45,6 @@ def modify_bashrc():
         file.write("\n#ADDED BY P2 HYPRLAND THEME INSTALLER\nalias neofetch='fastfetch'\n")
 
 def main():
-    install_packages()
     init_directories()
     copy_file("p-2.png", f"{WALLPAPER_PATH}/p-2.png")
     copy_config_files("hypr", HYPRLAND_PATH)
