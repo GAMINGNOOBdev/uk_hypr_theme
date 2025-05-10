@@ -25,9 +25,7 @@ def copy_file(inputpath, outputpath):
 
 def init_directories():
     for directory in PATHS:
-        try:
-            dir(directory)
-        except:
+        if not os.path.isdir(directory):
             print(f"Making directory '{directory}'")
             os.mkdir(directory)
 
