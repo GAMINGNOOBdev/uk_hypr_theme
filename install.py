@@ -28,6 +28,7 @@ def init_directories():
         try:
             dir(directory)
         except:
+            print(f"Making directory '{directory}'")
             os.mkdir(directory)
 
 def copy_config_files(inputdir, outputdir):
