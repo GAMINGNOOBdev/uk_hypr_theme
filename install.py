@@ -65,11 +65,10 @@ def modify_bashrc():
     bashrc = f"{HOME}/.bashrc"
     with open(bashrc,"r") as file:
         contents = file.readlines()
-        print(contents)
-    if "alias neofetch='fastfetch'" not in contents:
+    if "alias neofetch='fastfetch'\n" not in contents:
         with open(bashrc, "a") as file:
             file.write("\n#ADDED BY HYPRLAND THEME INSTALLER\nalias neofetch='fastfetch'\n")
-        print("Modified bashrc to now contain")
+        print("Modified bashrc to now contain neofetch alias")
 
 def main():
     print("Select a theme to install")
