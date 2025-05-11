@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export HYPRSHOT_DIR=$HOME/Pictures/Screenshots
+hyprshot --mode region

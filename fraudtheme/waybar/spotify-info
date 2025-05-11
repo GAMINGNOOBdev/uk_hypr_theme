@@ -20,6 +20,10 @@ def printjson(json : dict):
 def rebuild_string_with_correct_naming_and_such_idk_this_is_just_so_that_waybar_doesnt_shit_itself(name) -> str:
     result = ""
 
+    if name == "No players found":
+        printjson(JSON)
+        exit(0)
+
     for i in name:
         if i == "\"":
             result += "\\\""
@@ -35,15 +39,10 @@ def rebuild_string_with_correct_naming_and_such_idk_this_is_just_so_that_waybar_
 cleanup = rebuild_string_with_correct_naming_and_such_idk_this_is_just_so_that_waybar_doesnt_shit_itself
 
 STATUS = cleanup(subprocess.getoutput("playerctl --player=spotify status"))
-
-if STATUS == "No players found":
-    printjson(JSON)
-    exit(0)
-
 TITLE  = cleanup(subprocess.getoutput("playerctl --player=spotify metadata title"))
 ARTIST = cleanup(subprocess.getoutput("playerctl --player=spotify metadata artist"))
 ALBUM  = cleanup(subprocess.getoutput("playerctl --player=spotify metadata album"))
-VOLUME = int(round(float(subprocess.getoutput("playerctl --player=spotify metadata --format \"{{ volume }}\"")) * 100, 0))
+VOLUME = int(round(float(cleanup(subprocess.getoutput("playerctl --player=spotify metadata --format \"{{ volume }}\""))) * 100, 0))
 
 JSON["text"]    = f"{STATUS}: {TITLE} - {ARTIST}"
 JSON["tooltip"] = f"Title: {TITLE}\\nArtist: {ARTIST}\\nAlbum: {ALBUM}\\nVolume: {VOLUME}%"
