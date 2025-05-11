@@ -1,6 +1,16 @@
 # ULTRAHYPRTHEME
 ULTRAKILL Theme files for Hyprland
 
+## Screenshots
+> [!NOTE]
+> Screenshots were taken in a hurry inside a qemu vm.
+
+### P-2 Theme
+![P-2 Theme](/screenshots/p2.png)
+
+### Fraudulence Theme
+![Fraud 8-1 Theme](/screenshots/fraud.png)
+
 ## Prerequisites
 You have to have archlinux. Why? Too lazy to add support to detect the package manager of choice.
 You have to have `yay`, `python3` and `git` installed.
