@@ -36,6 +36,10 @@ Now...
 
 <s><b> H A V E   F U N </b></s>
 
+## Bug finders
+
+[pradosh-arduino](https://github.com/pradosh-arduino) found out that the `poppler-glib` package is sometimes necesary.
+
 ## Credits
 
 The installer automatically downloads the library [simple term menu](https://github.com/IngoMeyer441/simple-term-menu) by IngoMeyer441.
