@@ -8,6 +8,7 @@ CONFIG = f"{HOME}/.config"
 WALLPAPER_PATH = f"{HOME}/Wallpapers"
 FASTFETCH_PATH = f"{CONFIG}/fastfetch"
 HYPRLAND_PATH = f"{CONFIG}/hypr"
+SCRIPTS_PATH = f"{CONFIG}/Scripts"
 WAYBAR_PATH = f"{CONFIG}/waybar"
 
 PATHS = [
@@ -15,6 +16,7 @@ PATHS = [
     WALLPAPER_PATH,
     FASTFETCH_PATH,
     HYPRLAND_PATH,
+    SCRIPTS_PATH,
     WAYBAR_PATH,
 ]
 
@@ -47,6 +49,7 @@ def main():
     copy_file("p-2.png", f"{WALLPAPER_PATH}/p-2.png")
     copy_config_files("hypr", HYPRLAND_PATH)
     copy_config_files("waybar", WAYBAR_PATH)
+    copy_config_files("Scripts", SCRIPTS_PATH)
     copy_config_files("fastfetch", FASTFETCH_PATH)
     modify_bashrc()
 
