@@ -18,8 +18,7 @@ if not os.path.isfile("simple_term_menu.py"):
     print("Could not find terminal library!")
     download("https://raw.githubusercontent.com/IngoMeyer441/simple-term-menu/refs/heads/develop/simple_term_menu.py", "simple_term_menu.py")
 
-
-
+import simple_term_menu as stm
 import subprocess
 import getpass
 import shutil

@@ -25,3 +25,8 @@ cd ..
 Now...
 
 <s><b> H A V E   F U N </b></s>
+
+# Credits
+
+The installer automatically downloads the library [simple term menu](https://github.com/IngoMeyer441/simple-term-menu) by IngoMeyer441 from github.
+
