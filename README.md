@@ -18,11 +18,11 @@ The extra packages such as hyprland, waybar, fastfetch, hyprpaper and so on will
 
 ## Installation
 First of all, clone this repository by running:
-`git clone https://github.com/GAMINGNOOBdev/uk_hypr_theme`
+```bash
+git clone https://github.com/GAMINGNOOBdev/uk_hypr_theme
+```
 
-After that you can change into the cloned repository and run the install scripts:
-> [!NOTE]
-> You have to run the `install_packages.sh` file first before running the python script!!!
+After that you can change into the cloned repository and run the install script:
 ```bash
 
 cd uk_hypr_theme
@@ -31,12 +31,11 @@ python3 install.py
 cd ..
 
 ```
-
+Aaaaaand you're done.
 Now...
 
 <s><b> H A V E   F U N </b></s>
 
-# Credits
+## Credits
 
-The installer automatically downloads the library [simple term menu](https://github.com/IngoMeyer441/simple-term-menu) by IngoMeyer441 from github.
-
+The installer automatically downloads the library [simple term menu](https://github.com/IngoMeyer441/simple-term-menu) by IngoMeyer441.
