@@ -47,7 +47,7 @@ def init_directories():
             os.mkdir(directory)
 
 def copy_file(inputpath, outputpath):
-    print(f"'copying {inputpath}' --> '{outputpath}'")
+    print(f"copying '{inputpath}' --> '{outputpath}'")
     shutil.copy(inputpath, outputpath)
 
 def copy_files(inputdir, outputdir):
@@ -65,6 +65,7 @@ def modify_bashrc():
     bashrc = f"{HOME}/.bashrc"
     with open(bashrc,"r") as file:
         contents = file.readlines()
+        print(contents)
     if "alias neofetch='fastfetch'" not in contents:
         with open(bashrc, "a") as file:
             file.write("\n#ADDED BY HYPRLAND THEME INSTALLER\nalias neofetch='fastfetch'\n")
