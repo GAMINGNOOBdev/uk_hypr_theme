@@ -61,8 +61,14 @@ def copy_files(inputdir, outputdir):
         print(e)
 
 def modify_bashrc():
-    with open(f"{HOME}/.bashrc", "a") as file:
-        file.write("\n#ADDED BY P2 HYPRLAND THEME INSTALLER\nalias neofetch='fastfetch'\n")
+    contents = None
+    bashrc = f"{HOME}/.bashrc"
+    with open(bashrc,"r") as file:
+        contents = file.readlines()
+    if "alias neofetch='fastfetch'" not in contents:
+        with open(bashrc, "a") as file:
+            file.write("\n#ADDED BY HYPRLAND THEME INSTALLER\nalias neofetch='fastfetch'\n")
+        print("Modified bashrc to now contain")
 
 def main():
     print("Select a theme to install")
@@ -85,8 +91,6 @@ def main():
     copy_files(f"{themeFolder}/Scripts", SCRIPTS_PATH)
     copy_files(f"{themeFolder}/fastfetch", FASTFETCH_PATH)
     modify_bashrc()
-
-    os.system("clear")
 
     print(f"Successfully installed '{themes[option]}'")
     stm.TerminalMenu(["ok"]).show()
