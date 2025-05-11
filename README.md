@@ -11,7 +11,8 @@ First of all, clone this repository by running:
 `git clone https://github.com/GAMINGNOOBdev/uk_hypr_theme`
 
 After that you can change into the cloned repository and run the install scripts:
-> Note: You have to run the `install_packages.sh` file first before running the python script!!!
+> [!NOTE]
+> You have to run the `install_packages.sh` file first before running the python script!!!
 ```bash
 
 cd uk_hypr_theme
